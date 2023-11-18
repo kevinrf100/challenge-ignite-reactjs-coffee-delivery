@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const CoffeeShopContainer = styled.div`
+  margin-bottom: 9.4rem;
+`;
+
+export const CoffeeShopContent = styled.div`
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   gap: 3.375rem;

@@ -4,13 +4,19 @@ export const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
 
+  background: ${(props) => props.theme["white-300"]};
+`;
+
+export const HeaderContentContainer = styled.div`
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background: ${(props) => props.theme["white-300"]};
-
-  padding: 2rem 10rem;
+  padding: 2rem 0rem;
 `;
 
 export const ActionContainer = styled.div`

@@ -1,12 +1,23 @@
 import styled from "styled-components";
+import introBackgroundImg from "../../../../assets/IntroBackground.png";
 
-export const IntroContainer = styled.div`
+export const IntroContainer = styled.section`
+  width: 100%;
+  height: 34rem;
+  background: ${() => `url(${introBackgroundImg}) no-repeat center`};
+  background-size: cover;
+`;
+
+export const IntroContentContainer = styled.div`
   display: flex;
-  justify-content: center;
-
-  padding: 5.75rem 0;
+  justify-content: space-between;
+  align-items: center;
 
   gap: 3.5rem;
+
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
 `;
 
 export const InformationContainer = styled.div`

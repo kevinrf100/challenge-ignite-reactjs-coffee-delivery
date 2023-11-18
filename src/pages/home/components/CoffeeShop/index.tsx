@@ -1,8 +1,9 @@
-import { Coffee } from "./components/Coffee";
+import { CoffeeCard } from "./components/CoffeeCard";
 import {
   CoffeeListContainer,
   CoffeeListTitle,
   CoffeeShopContainer,
+  CoffeeShopContent,
 } from "./styles";
 import { v4 as uuid } from "uuid";
 
@@ -48,19 +49,21 @@ export function CoffeeShop() {
 
   return (
     <CoffeeShopContainer>
-      <CoffeeListTitle>Nossos cafés</CoffeeListTitle>
-      <CoffeeListContainer>
-        {coffeeList.map((coffee) => (
-          <Coffee
-            image={coffee.image}
-            tags={coffee.tags}
-            title={coffee.title}
-            description={coffee.description}
-            price={coffee.price}
-            key={coffee.id}
-          />
-        ))}
-      </CoffeeListContainer>
+      <CoffeeShopContent>
+        <CoffeeListTitle>Nossos cafés</CoffeeListTitle>
+        <CoffeeListContainer>
+          {coffeeList.map((coffee) => (
+            <CoffeeCard
+              image={coffee.image}
+              tags={coffee.tags}
+              title={coffee.title}
+              description={coffee.description}
+              price={coffee.price}
+              key={coffee.id}
+            />
+          ))}
+        </CoffeeListContainer>
+      </CoffeeShopContent>
     </CoffeeShopContainer>
   );
 }

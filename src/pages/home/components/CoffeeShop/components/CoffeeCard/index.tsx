@@ -23,7 +23,7 @@ interface CoffeeProps {
   price: string;
 }
 
-export function Coffee({
+export function CoffeeCard({
   image,
   tags,
   title,
