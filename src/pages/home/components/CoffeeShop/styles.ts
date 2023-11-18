@@ -17,6 +17,7 @@ export const CoffeeShopContent = styled.div`
 export const CoffeeListContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   gap: 2rem;
 
