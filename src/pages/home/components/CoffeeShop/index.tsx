@@ -11,7 +11,7 @@ export function CoffeeShop() {
   const coffeeList = [
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/Expressos/ExpressoTradicional.png",
       tags: ["tradicional"],
       title: "Expresso Tradicional",
       description: "O tradicional café feito com água quente e grãos moídos",
@@ -27,7 +27,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/Expressos/ExpressoCremoso.png",
       tags: ["tradicional"],
       title: "Expresso Cremoso",
       description: "Café expresso tradicional com espuma cremosa",
@@ -35,7 +35,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/Expressos/ExpressoGelado.png",
       tags: ["tradicional", "gelado"],
       title: "Expresso Gelado",
       description: "Bebida preparada com café expresso e cubos de gelo",
@@ -43,7 +43,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/WithMilk/CafeComLeite.png",
       tags: ["tradicional", "com leite"],
       title: "Café com Leite",
       description: "Meio a meio de expresso tradicional com leite vaporizado",
@@ -51,7 +51,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/WithMilk/Latte.png",
       tags: ["tradicional", "com leite"],
       title: "Latte",
       description:
@@ -60,7 +60,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/WithMilk/Capuccino.png",
       tags: ["tradicional", "com leite"],
       title: "Capuccino",
       description:
@@ -69,7 +69,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/WithMilk/Macchiato.png",
       tags: ["tradicional", "com leite"],
       title: "Macchiato",
       description:
@@ -78,7 +78,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/WithMilk/Mocaccino.png",
       tags: ["tradicional", "com leite"],
       title: "Mocaccino",
       description: "Café expresso com calda de chocolate, pouco leite e espuma",
@@ -86,7 +86,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/WithMilk/ChocolateQuente.png",
       tags: ["especial", "com leite"],
       title: "Chocolate Quente",
       description:
@@ -104,7 +104,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/Special/Havaiano.png",
       tags: ["especial"],
       title: "Havaiano",
       description: "Bebida adocicada preparada com café e leite de coco",
@@ -112,7 +112,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/Special/Arabe.png",
       tags: ["especial"],
       title: "Árabe",
       description: "Bebida preparada com grãos de café árabe e especiarias",
@@ -120,7 +120,7 @@ export function CoffeeShop() {
     },
     {
       id: uuid(),
-      image: "/Coffees/Expressos/ExpressoAmericano.png",
+      image: "/Coffees/Special/Irlandes.png",
       tags: ["especial"],
       title: "Irlandês",
       description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
