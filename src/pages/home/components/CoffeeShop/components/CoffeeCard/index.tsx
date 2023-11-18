@@ -20,7 +20,7 @@ interface CoffeeProps {
   tags: string[];
   title: string;
   description: string;
-  price: string;
+  price: number;
 }
 
 export function CoffeeCard({
@@ -30,6 +30,10 @@ export function CoffeeCard({
   description,
   price,
 }: CoffeeProps) {
+  const formattedPrice = price.toLocaleString("pt-BR", {
+    minimumFractionDigits: 2,
+  });
+
   return (
     <CoffeeContainer>
       <HeaderContainer>
@@ -46,7 +50,7 @@ export function CoffeeCard({
       </BodyContainer>
       <FooterContainer>
         <CoffeePrice>
-          R$ <span>{price}</span>
+          R$ <span>{formattedPrice}</span>
         </CoffeePrice>
         <ActionContainer>
           <InputCount />

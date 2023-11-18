@@ -19,7 +19,7 @@ export function CoffeeShop() {
       tags: ["tradicional"],
       title: "Expresso Tradicional",
       description: "O tradicional café feito com água quente e grãos moídos",
-      price: "9,90",
+      price: 9.9,
     },
     {
       id: uuid(),
@@ -27,7 +27,7 @@ export function CoffeeShop() {
       tags: ["tradicional"],
       title: "Expresso Americano",
       description: "Expresso diluído, menos intenso que o tradicional",
-      price: "9,90",
+      price: 9.9,
     },
     {
       id: uuid(),
@@ -35,7 +35,7 @@ export function CoffeeShop() {
       tags: ["tradicional"],
       title: "Expresso Cremoso",
       description: "Café expresso tradicional com espuma cremosa",
-      price: "9,90",
+      price: 9.9,
     },
     {
       id: uuid(),
@@ -43,7 +43,7 @@ export function CoffeeShop() {
       tags: ["tradicional", "gelado"],
       title: "Expresso Gelado",
       description: "Bebida preparada com café expresso e cubos de gelo",
-      price: "9,90",
+      price: 9.9,
     },
   ];
 
