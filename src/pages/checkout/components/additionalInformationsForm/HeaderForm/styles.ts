@@ -8,6 +8,8 @@ export const HeaderFormContainer = styled.div`
 export const HeaderInformationContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 2rem;
 `;
 
 export const HeaderTitle = styled.h2`
