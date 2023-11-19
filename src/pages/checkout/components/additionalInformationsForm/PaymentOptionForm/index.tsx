@@ -1,6 +1,10 @@
-import { CurrencyDollar } from "phosphor-react";
+import { CurrencyDollar, CreditCard, Bank, Money } from "phosphor-react";
 import HeaderForm from "../HeaderForm";
-import { PaymentOptionFormContainer } from "./styles";
+import {
+  PaymentButton,
+  PaymentOptionContainer,
+  PaymentOptionFormContainer,
+} from "./styles";
 import { useTheme } from "styled-components";
 
 export default function PaymentOptionForm() {
@@ -13,6 +17,20 @@ export default function PaymentOptionForm() {
         title="Pagamento"
         description="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
       />
+      <PaymentOptionContainer>
+        <PaymentButton className={"selected"}>
+          <CreditCard color={theme["purple-500"]} />
+          Cartão de crédito
+        </PaymentButton>
+        <PaymentButton>
+          <Bank color={theme["purple-500"]} />
+          Cartão de débito
+        </PaymentButton>
+        <PaymentButton>
+          <Money color={theme["purple-500"]} />
+          Dinheiro
+        </PaymentButton>
+      </PaymentOptionContainer>
     </PaymentOptionFormContainer>
   );
 }
