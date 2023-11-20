@@ -20,4 +20,8 @@ export const InputStyleContainer = styled.input`
   &::placeholder {
     color: ${(props) => props.theme["black-300"]};
   }
+
+  &:focus {
+    border: 1px solid ${(props) => props.theme["yellow-800"]};
+  }
 `;
