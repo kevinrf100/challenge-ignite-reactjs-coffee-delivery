@@ -61,7 +61,7 @@ export function CoffeeCard({
               console.log("Testing");
             }}
           >
-            <ShoppingCart size={22} weight="fill" />
+            <ShoppingCart size={22} weight="fill" color="white" />
           </Button>
         </ActionContainer>
       </FooterContainer>
