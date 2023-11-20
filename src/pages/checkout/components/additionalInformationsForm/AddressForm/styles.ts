@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { BasicFormContainer } from "../styles";
+import { BasicContainer } from "../../../styles";
 
-export const AddressFormContainer = styled(BasicFormContainer)``;
+export const AddressFormContainer = styled(BasicContainer)``;
 
 export const AddressInputContainer = styled.div`
   width: 100%;

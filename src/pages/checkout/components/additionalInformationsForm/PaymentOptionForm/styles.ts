@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { BasicFormContainer } from "../styles";
+import { BasicContainer } from "../../../styles";
 
-export const PaymentOptionFormContainer = styled(BasicFormContainer)``;
+export const PaymentOptionFormContainer = styled(BasicContainer)``;
 
 export const PaymentOptionContainer = styled.div`
   display: flex;
