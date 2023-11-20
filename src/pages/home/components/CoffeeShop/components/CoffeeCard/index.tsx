@@ -1,6 +1,6 @@
 import { ShoppingCart } from "phosphor-react";
 import expresso from "../../../../../../assets/Expresso.png";
-import { Button } from "../../../../../../components/Button";
+import { Button } from "../../../../../../components/button";
 import {
   ActionContainer,
   BodyContainer,

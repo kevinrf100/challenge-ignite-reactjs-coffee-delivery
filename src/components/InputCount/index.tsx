@@ -1,5 +1,5 @@
 import { Minus, Plus } from "phosphor-react";
-import { Button } from "../Button";
+import { Button } from "../button";
 import { useState } from "react";
 import { CounterContainer, CounterInput } from "./styles";
 
