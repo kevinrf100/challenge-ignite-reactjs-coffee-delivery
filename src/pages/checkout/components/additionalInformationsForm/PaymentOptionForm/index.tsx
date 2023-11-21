@@ -6,6 +6,7 @@ import {
   PaymentOptionFormContainer,
 } from "./styles";
 import { useTheme } from "styled-components";
+import IconButton from "../../../../../components/Buttons/IconButton";
 
 export default function PaymentOptionForm() {
   const theme = useTheme();
@@ -18,18 +19,18 @@ export default function PaymentOptionForm() {
         description="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
       />
       <PaymentOptionContainer>
-        <PaymentButton className={"selected"}>
+        <IconButton className={`selected bigger`}>
           <CreditCard color={theme["purple-500"]} />
           Cartão de crédito
-        </PaymentButton>
-        <PaymentButton>
+        </IconButton>
+        <IconButton className="bigger">
           <Bank color={theme["purple-500"]} />
           Cartão de débito
-        </PaymentButton>
-        <PaymentButton>
+        </IconButton>
+        <IconButton className="bigger">
           <Money color={theme["purple-500"]} />
           Dinheiro
-        </PaymentButton>
+        </IconButton>
       </PaymentOptionContainer>
     </PaymentOptionFormContainer>
   );

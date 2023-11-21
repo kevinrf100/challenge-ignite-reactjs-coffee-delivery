@@ -134,14 +134,7 @@ export function CoffeeShop() {
         <CoffeeListTitle>Nossos cafés</CoffeeListTitle>
         <CoffeeListContainer>
           {coffeeList.map((coffee) => (
-            <CoffeeCard
-              image={coffee.image}
-              tags={coffee.tags}
-              title={coffee.title}
-              description={coffee.description}
-              price={coffee.price}
-              key={coffee.id}
-            />
+            <CoffeeCard key={coffee.id} coffee={coffee} />
           ))}
         </CoffeeListContainer>
       </CoffeeShopContent>

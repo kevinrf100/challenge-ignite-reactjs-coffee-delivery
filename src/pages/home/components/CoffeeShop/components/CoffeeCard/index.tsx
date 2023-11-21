@@ -15,7 +15,7 @@ import {
 } from "./styles";
 import { InputCount } from "../../../../../../components/InputCount";
 
-interface CoffeeProps {
+export interface Coffee {
   image: string;
   tags: string[];
   title: string;
@@ -23,30 +23,28 @@ interface CoffeeProps {
   price: number;
 }
 
-export function CoffeeCard({
-  image,
-  tags,
-  title,
-  description,
-  price,
-}: CoffeeProps) {
-  const formattedPrice = price.toLocaleString("pt-BR", {
+interface CoffeeProps {
+  coffee: Coffee;
+}
+
+export function CoffeeCard({ coffee }: CoffeeProps) {
+  const formattedPrice = coffee.price.toLocaleString("pt-BR", {
     minimumFractionDigits: 2,
   });
 
   return (
     <CoffeeContainer>
       <HeaderContainer>
-        <img src={image} alt="" />
+        <img src={coffee.image} alt="" />
       </HeaderContainer>
       <BodyContainer>
         <CoffeeTagsContainer>
-          {tags.map((tag, index) => (
+          {coffee.tags.map((tag, index) => (
             <CoffeeTag key={index}>{tag}</CoffeeTag>
           ))}
         </CoffeeTagsContainer>
-        <CoffeeTitle>{title}</CoffeeTitle>
-        <CoffeeDescription>{description}</CoffeeDescription>
+        <CoffeeTitle>{coffee.title}</CoffeeTitle>
+        <CoffeeDescription>{coffee.description}</CoffeeDescription>
       </BodyContainer>
       <FooterContainer>
         <CoffeePrice>

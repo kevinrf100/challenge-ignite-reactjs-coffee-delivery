@@ -1,26 +1,14 @@
-import { ReactNode } from "react";
-import { ButtonContainer } from "./styles";
 import { defaultTheme } from "../../styles/themes/defaultTheme";
+import { ButtonContainer } from "./styles";
 
-interface ButtonProps {
-  onClick: () => void;
-  children: ReactNode;
-  buttonColor: keyof typeof defaultTheme;
-  buttonBackgroundColor: keyof typeof defaultTheme;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  background: keyof typeof defaultTheme;
 }
 
-export function Button({
-  onClick,
-  children,
-  buttonColor,
-  buttonBackgroundColor,
-}: ButtonProps) {
+export function Button({ background, children, ...props }: ButtonProps) {
   return (
-    <ButtonContainer
-      buttonbackground={buttonBackgroundColor}
-      buttoncolor={buttonColor}
-      onClick={onClick}
-    >
+    <ButtonContainer background={background} {...props}>
       {children}
     </ButtonContainer>
   );
