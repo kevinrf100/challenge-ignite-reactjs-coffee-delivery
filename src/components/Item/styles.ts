@@ -6,14 +6,6 @@ export const ItemContainer = styled.div`
   gap: 0.75rem;
 
   align-items: center;
-
-  p {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
-  }
 `;
 
 export const ICON_BACKGROUND_COLORS = {

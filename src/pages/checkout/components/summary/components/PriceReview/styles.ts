@@ -12,6 +12,10 @@ export const PriceReviewContainer = styled.div`
     font-weight: 700;
     justify-content: center;
     color: ${(props) => props.theme["white-700"]};
+
+    &:hover {
+      background: ${(props) => props.theme["yellow-800"]};
+    }
   }
 `;
 

@@ -10,15 +10,27 @@ import {
   CoffeeImg,
 } from "./styles";
 import { Trash } from "phosphor-react";
-import { Coffee } from "../../../../../home/components/CoffeeShop/components/CoffeeCard";
+import { useContext, useEffect, useState } from "react";
+import { CartContext, Item } from "../../../../../../contexts/CartContext";
 
 export interface CoffeeItemProps {
-  coffee: Coffee;
+  coffee: Item;
 }
 
 export default function CoffeeItem({ coffee }: CoffeeItemProps) {
   const theme = useTheme();
-  // "/Coffees/WithMilk/Capuccino.png"
+  const { removeItem, modifyItem } = useContext(CartContext);
+  const [counter, setCounter] = useState(coffee.amount);
+
+  function handleRemoveItem() {
+    removeItem(coffee);
+  }
+
+  useEffect(() => {
+    const newCoffeeAmount = { ...coffee, amount: counter };
+    modifyItem(newCoffeeAmount);
+  }, [counter]);
+
   return (
     <CoffeeItemContainer>
       <ItemContainer>
@@ -26,8 +38,8 @@ export default function CoffeeItem({ coffee }: CoffeeItemProps) {
         <CoffeeDetailsContainer>
           <CoffeeName>{coffee.title}</CoffeeName>
           <CoffeeActionButtons>
-            <InputCount />
-            <IconButton onClick={() => {}}>
+            <InputCount counter={counter} setCounter={setCounter} />
+            <IconButton onClick={handleRemoveItem}>
               <Trash color={theme["purple-500"]} />
               Remover
             </IconButton>

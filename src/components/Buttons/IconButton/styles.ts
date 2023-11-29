@@ -18,6 +18,7 @@ export const ButtonContainer = styled.button`
 
   &:hover {
     background: ${(props) => props.theme["black-100"]};
+    cursor: pointer;
   }
 
   &.selected {

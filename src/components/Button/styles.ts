@@ -3,6 +3,7 @@ import { defaultTheme } from "../../styles/themes/defaultTheme";
 
 interface ButtonProps {
   background?: keyof typeof defaultTheme;
+  hoverBackground?: keyof typeof defaultTheme;
 }
 
 export const ButtonContainer = styled.button<ButtonProps>`

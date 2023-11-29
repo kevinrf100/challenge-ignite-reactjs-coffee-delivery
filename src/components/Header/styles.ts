@@ -51,8 +51,35 @@ export const AddressButton = styled(Button)`
 `;
 
 export const CartButton = styled(Button)`
+  position: relative;
+  display: flex;
   background: ${(props) => props.theme["yellow-100"]};
   color: ${(props) => props.theme["yellow-800"]};
+
+  span {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+
+    top: calc(-1.25rem / 2);
+    right: calc(-1.25rem / 2);
+
+    color: ${(props) => props.theme["white-100"]};
+    background: ${(props) => props.theme["yellow-800"]};
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.72px;
+  }
 
   &:hover {
     cursor: pointer;

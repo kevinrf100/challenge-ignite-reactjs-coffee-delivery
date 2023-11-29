@@ -14,8 +14,12 @@ import {
   HeaderContainer,
 } from "./styles";
 import { InputCount } from "../../../../../../components/InputCount";
+import { useTheme } from "styled-components";
+import { useContext, useState } from "react";
+import { CartContext } from "../../../../../../contexts/CartContext";
 
 export interface Coffee {
+  id: string;
   image: string;
   tags: string[];
   title: string;
@@ -28,9 +32,18 @@ interface CoffeeProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeProps) {
+  const theme = useTheme();
+  const { addItem } = useContext(CartContext);
+
+  const [counter, setCounter] = useState(1);
+
   const formattedPrice = coffee.price.toLocaleString("pt-BR", {
     minimumFractionDigits: 2,
   });
+
+  function handleAddCoffeeToCart() {
+    addItem({ ...coffee, amount: counter });
+  }
 
   return (
     <CoffeeContainer>
@@ -51,13 +64,11 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
           R$ <span>{formattedPrice}</span>
         </CoffeePrice>
         <ActionContainer>
-          <InputCount />
+          <InputCount setCounter={setCounter} counter={counter} />
           <Button
-            buttonColor="white-500"
-            buttonBackgroundColor="purple-800"
-            onClick={() => {
-              console.log("Testing");
-            }}
+            color={theme["white-500"]}
+            background="purple-500"
+            onClick={handleAddCoffeeToCart}
           >
             <ShoppingCart size={22} weight="fill" color="white" />
           </Button>

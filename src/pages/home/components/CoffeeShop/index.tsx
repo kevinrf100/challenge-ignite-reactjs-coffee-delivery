@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CoffeeCard } from "./components/CoffeeCard";
 import {
   CoffeeListContainer,
@@ -5,12 +6,11 @@ import {
   CoffeeShopContainer,
   CoffeeShopContent,
 } from "./styles";
-import { v4 as uuid } from "uuid";
 
 export function CoffeeShop() {
   const coffeeList = [
     {
-      id: uuid(),
+      id: "Coffee-Expresso-Tradicional",
       image: "/Coffees/Expressos/ExpressoTradicional.png",
       tags: ["tradicional"],
       title: "Expresso Tradicional",
@@ -18,7 +18,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Expresso-Americano",
       image: "/Coffees/Expressos/ExpressoAmericano.png",
       tags: ["tradicional"],
       title: "Expresso Americano",
@@ -26,7 +26,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Expresso-Cremoso",
       image: "/Coffees/Expressos/ExpressoCremoso.png",
       tags: ["tradicional"],
       title: "Expresso Cremoso",
@@ -34,7 +34,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Expresso",
       image: "/Coffees/Expressos/ExpressoGelado.png",
       tags: ["tradicional", "gelado"],
       title: "Expresso Gelado",
@@ -42,7 +42,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Café",
       image: "/Coffees/WithMilk/CafeComLeite.png",
       tags: ["tradicional", "com leite"],
       title: "Café com Leite",
@@ -50,16 +50,16 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Latte",
       image: "/Coffees/WithMilk/Latte.png",
       tags: ["tradicional", "com leite"],
       title: "Latte",
       description:
-        "MUma dose de café expresso com o dobro de leite e espuma cremosa",
+        "Uma dose de café expresso com o dobro de leite e espuma cremosa",
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Capuccino",
       image: "/Coffees/WithMilk/Capuccino.png",
       tags: ["tradicional", "com leite"],
       title: "Capuccino",
@@ -68,7 +68,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Macchiato",
       image: "/Coffees/WithMilk/Macchiato.png",
       tags: ["tradicional", "com leite"],
       title: "Macchiato",
@@ -77,7 +77,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Mocaccino",
       image: "/Coffees/WithMilk/Mocaccino.png",
       tags: ["tradicional", "com leite"],
       title: "Mocaccino",
@@ -85,7 +85,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Chocolate",
       image: "/Coffees/WithMilk/ChocolateQuente.png",
       tags: ["especial", "com leite"],
       title: "Chocolate Quente",
@@ -94,7 +94,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Cubano",
       image: "/Coffees/Expressos/ExpressoAmericano.png",
       tags: ["especial", "alcoólico", "gelado"],
       title: "Cubano",
@@ -103,7 +103,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Havaiano",
       image: "/Coffees/Special/Havaiano.png",
       tags: ["especial"],
       title: "Havaiano",
@@ -111,7 +111,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Árabe",
       image: "/Coffees/Special/Arabe.png",
       tags: ["especial"],
       title: "Árabe",
@@ -119,7 +119,7 @@ export function CoffeeShop() {
       price: 9.9,
     },
     {
-      id: uuid(),
+      id: "Coffee-Irlandês",
       image: "/Coffees/Special/Irlandes.png",
       tags: ["especial"],
       title: "Irlandês",

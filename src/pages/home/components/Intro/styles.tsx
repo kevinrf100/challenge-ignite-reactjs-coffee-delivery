@@ -61,3 +61,11 @@ export const BenefitsColumn = styled.div`
 
   justify-content: space-between;
 `;
+
+export const BenefitsTitle = styled.p`
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+`;

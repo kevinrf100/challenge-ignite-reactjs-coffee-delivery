@@ -3,9 +3,17 @@ import HeaderForm from "../HeaderForm";
 import { AddressFormContainer, AddressInputContainer } from "./styles";
 import { MapPin } from "phosphor-react";
 import Input from "../../../../../components/input";
+import { useState } from "react";
 
 export default function AddressForm() {
   const theme = useTheme();
+  const [cep, setCep] = useState("");
+  const [street, seStreet] = useState("");
+  const [number, setNumber] = useState("");
+  const [complement, setComplement] = useState("");
+  const [district, setDistrict] = useState("");
+  const [city, setCity] = useState("");
+  const [uf, setUf] = useState("");
 
   return (
     <AddressFormContainer>
@@ -16,13 +24,55 @@ export default function AddressForm() {
       />
 
       <AddressInputContainer>
-        <Input className="cep" type="number" placeholder="CEP" />
-        <Input className="street" type="text" placeholder="Rua" />
-        <Input className="number" type="number" placeholder="Número" />
-        <Input className="complement" type="text" placeholder="Complemento" />
-        <Input className="district" type="text" placeholder="Bairro" />
-        <Input className="city" type="text" placeholder="Cidade" />
-        <Input className="uf" type="text" placeholder="UF" />
+        <Input
+          onChange={(event) => setCep(event.target.value)}
+          value={cep}
+          className="cep"
+          type="number"
+          placeholder="CEP"
+        />
+        <Input
+          onChange={(event) => seStreet(event.target.value)}
+          value={street}
+          className="street"
+          type="text"
+          placeholder="Rua"
+        />
+        <Input
+          onChange={(event) => setNumber(event.target.value)}
+          value={number}
+          className="number"
+          type="number"
+          placeholder="Número"
+        />
+        <Input
+          onChange={(event) => setComplement(event.target.value)}
+          value={complement}
+          className="complement"
+          type="text"
+          placeholder="Complemento"
+        />
+        <Input
+          onChange={(event) => setDistrict(event.target.value)}
+          value={district}
+          className="district"
+          type="text"
+          placeholder="Bairro"
+        />
+        <Input
+          onChange={(event) => setCity(event.target.value)}
+          value={city}
+          className="city"
+          type="text"
+          placeholder="Cidade"
+        />
+        <Input
+          onChange={(event) => setUf(event.target.value)}
+          value={uf}
+          className="uf"
+          type="text"
+          placeholder="UF"
+        />
       </AddressInputContainer>
     </AddressFormContainer>
   );
