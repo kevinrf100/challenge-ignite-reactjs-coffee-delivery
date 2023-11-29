@@ -11,11 +11,13 @@ interface InputCountProps {
 export function InputCount({ setCounter, counter }: InputCountProps) {
   const theme = useTheme();
 
-  function increment(): void {
+  function increment(event: React.MouseEvent<HTMLElement>) {
+    event.preventDefault();
     setCounter((currentCounter) => currentCounter + 1);
   }
 
-  function decrement() {
+  function decrement(event: React.MouseEvent<HTMLElement>) {
+    event.preventDefault();
     if (counter > 1) {
       setCounter((currentCounter) => currentCounter - 1);
     }

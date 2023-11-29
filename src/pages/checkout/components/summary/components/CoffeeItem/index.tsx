@@ -22,7 +22,8 @@ export default function CoffeeItem({ coffee }: CoffeeItemProps) {
   const { removeItem, modifyItem } = useContext(CartContext);
   const [counter, setCounter] = useState(coffee.amount);
 
-  function handleRemoveItem() {
+  function handleRemoveItem(event: React.MouseEvent<HTMLElement>) {
+    event.preventDefault();
     removeItem(coffee);
   }
 

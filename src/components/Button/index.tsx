@@ -3,7 +3,7 @@ import { ButtonContainer } from "./styles";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  background: keyof typeof defaultTheme;
+  background?: keyof typeof defaultTheme;
 }
 
 export function Button({ background, children, ...props }: ButtonProps) {
