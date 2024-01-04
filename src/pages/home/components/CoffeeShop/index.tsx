@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { CoffeeCard } from "./components/CoffeeCard";
 import {
   CoffeeListContainer,

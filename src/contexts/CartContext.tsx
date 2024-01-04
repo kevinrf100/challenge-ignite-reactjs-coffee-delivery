@@ -8,6 +8,7 @@ export interface Item extends Coffee {
 interface CartContextType {
   cartItems: Item[];
   addItem: (coffee: Item) => void;
+  cleanItems: () => void;
   removeItem: (coffee: Item) => void;
   modifyItem: (coffee: Item) => void;
 }
@@ -61,9 +62,13 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     );
   }
 
+  function cleanItems() {
+    setCartItems([]);
+  }
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addItem, removeItem, modifyItem }}
+      value={{ cartItems, addItem, removeItem, modifyItem, cleanItems }}
     >
       {children}
     </CartContext.Provider>

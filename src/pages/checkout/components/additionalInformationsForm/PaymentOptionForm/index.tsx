@@ -7,7 +7,9 @@ import { useState } from "react";
 
 export default function PaymentOptionForm() {
   const theme = useTheme();
-  const [paymentOption, setPaymentOption] = useState<>();
+  const [paymentOption, setPaymentOption] = useState<
+    "credit" | "debit" | "cash"
+  >();
 
   return (
     <PaymentOptionFormContainer>
